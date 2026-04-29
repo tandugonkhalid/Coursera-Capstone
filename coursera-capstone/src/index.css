@@ -125,3 +125,9 @@ main{
   height: 325px;
   border-radius: 20px;
 }
+
+#card-header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
