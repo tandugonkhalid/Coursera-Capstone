@@ -15,7 +15,7 @@ return (
                     We are a family owned Mediterranean restaurant, focused on traditional recipes served with a modern twist.
                 </p>
                 <div id='reserve-btn'>
-                    <a href="">Reserve a table</a>
+                    <a href="/">Reserve a table</a>
                 </div>
             </div>
             <div id='bg-main-right'>

@@ -21,32 +21,24 @@ img{
 nav{
   display: flex;
   justify-content: space-evenly;
-  justify-items: center;
+  align-items: center;
   width: 100%;
   margin: 15px 0px;
-}
-
-ul{
-  display: flex;
-  justify-content: space-between;
-  justify-items: center;
-  list-style-type: none;
-  width: 50vw;
   font-size: 18px;
   font-family: "Karla", sans-serif;
   font-weight: bold;
 }
 
-ul li a{
+.nav-item{
   text-decoration: none;
   color: #495E57;
 }
 
-ul li a:link, a:visited, a:hover, a:active{
+.nav-item:link, a:visited, a:hover, a:active{
       text-decoration: none;
   }
 
-ul li a:hover{
+.nav-item:hover{
   color: #F4CE14;
   transition: ease-in-out .3s;
 }
