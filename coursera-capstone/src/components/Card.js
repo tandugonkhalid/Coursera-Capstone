@@ -1,7 +1,9 @@
-import '../index.css';
+
+import React from 'react';
 import bgimage from '../assets/greek salad.jpg';
 import bgimage1 from '../assets/bruchetta.svg';
 import bgimage2 from '../assets/lemon dessert.jpg';
+import { Routes, Route, Link } from "react-router-dom";
 
 function Card(){
     return(
@@ -9,7 +11,9 @@ function Card(){
             <div id="card-header">
                 <h1>This weeks specials!</h1> 
                 <div id='reserve-btn'>
-                    <a href="Menu">Online Menu</a>
+                    <nav>
+                        <Link to="/onlineorder" className="nav-item">Order Online</Link>
+                    </nav>
                 </div>
             </div>
             <div id="card">
