@@ -176,3 +176,29 @@ nav{
     color: black;
   }
 }
+
+.menu-item{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-family: "Karla", sans-serif;
+  font-size: 18px;
+  text-decoration: none;
+  margin-top: 3em;
+  background-color: #EDEFEE;
+  border-radius: 10px;
+}
+
+.menu-desc{
+  margin: 1.5rem;
+}
+
+.menu-title{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.menu-title p{
+  color: #F4CE14
+}
