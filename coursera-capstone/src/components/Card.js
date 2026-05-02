@@ -5,6 +5,12 @@ import bgimage1 from '../assets/bruchetta.svg';
 import bgimage2 from '../assets/lemon dessert.jpg';
 import { Routes, Route, Link } from "react-router-dom";
 
+const size = {
+    width: "340px",
+    borderRadius: "20px 20px 0px 0px",
+    height: "150px"
+}
+
 function Card(){
     return(
         <div>
@@ -18,7 +24,7 @@ function Card(){
             </div>
             <div id="card">
                 <div class="card-body">
-                    <img class="card-img" src={bgimage} alt="background-image" />
+                    <img class="card-img" src={bgimage} alt="background-image" style={size}/>
                     <div id="card-title"> 
                         <h4>Greek Salad</h4>
                         <p>$ 12.99</p>
@@ -30,7 +36,7 @@ function Card(){
                     <div class="card-links"><a href="Delivery">Order a delivery</a> </div>
                 </div>
                 <div class="card-body">
-                    <img class="card-img" src={bgimage1} alt="background-image" />
+                    <img class="card-img" src={bgimage1} alt="background-image" style={size} />
                     <div id="card-title"> 
                         <h4>Bruschetta</h4>
                         <p>$ 5.99</p>
@@ -41,7 +47,7 @@ function Card(){
                     <div class="card-links"><a href="Delivery">Order a delivery</a> </div>
                 </div>
                 <div class="card-body">
-                    <img class="card-img" src={bgimage2} alt="background-image" />
+                    <img class="card-img" src={bgimage2} alt="background-image" style={size} />
                     <div id="card-title"> 
                         <h4>Lemon Dessert</h4>
                         <p>$ 5.00</p>

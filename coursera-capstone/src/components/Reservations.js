@@ -1,11 +1,111 @@
 import React from 'react';
 import '../index.css';
+import { useState } from 'react';
+import 'bootstrap/dist/css/bootstrap.css';
 
 
 function Reservations(){
+
+    const [values, setValues] = useState({
+        firstname: '',
+        lastname: '',
+        email: '',
+        contact: '',
+        inlineRadioOptions: '',
+        date: '',
+        time: '',
+        guests: '',
+        occassion: ''
+    })
+
+    const handleChanges = (e) => {
+        setValues({...values, [e.target.name]:[e.target.value]})
+    }
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log(values);
+    }
+
  return(
         <div>
-            <p>This is reservations</p>
+            <h1>Reservation Form</h1>
+            <form onSubmit={handleSubmit}>
+                <div class="form-group">
+                    <label>First Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder='First Name' class="form-control" name="firstname" 
+                    onChange={(e) => handleChanges(e)} required/>
+                </div>
+                <div class="form-group">
+                    <label>Last Name</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder='Last Name' class="form-control" name="lastname" 
+                    onChange={(e) => handleChanges(e)} required/>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder='Email' class="form-control" name="email"
+                    onChange={(e) => handleChanges(e)} required/>
+                </div>
+                <div class="form-group">
+                    <label>Contact Info</label>
+                </div>
+                <div class="form-group">
+                    <input type="text" placeholder='Contact Info' class="form-control" name="contact"
+                    onChange={(e) => handleChanges(e)} required/>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="table for one"
+                    onChange={(e) => handleChanges(e)}/>
+                    <label class="form-check-label" for="inlineRadio1">table for one</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="table for two"
+                    onChange={(e) => handleChanges(e)}/>
+                    <label class="form-check-label" for="inlineRadio1">table for two</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="table for family"
+                    onChange={(e) => handleChanges(e)}/>
+                    <label class="form-check-label" for="inlineRadio1">table for family</label>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                </div>
+                <div class="form-group">
+                    <input type="date" placeholder='Date' class="form-control" name="date"
+                    onChange={(e) => handleChanges(e)} required/>
+                </div>
+                <div class="form-group">
+                    <label>Time</label>
+                </div>
+                <div class="form-group">
+                    <input type="time" placeholder='time' class="form-control" name="time"
+                    onChange={(e) => handleChanges(e)} required/>
+                </div>
+                <div class="form-group">
+                    <label>No. of Guests</label>
+                </div>
+                <div class="form-group">
+                    <input type="number" placeholder='Number of Guests' class="form-control" name="guests"
+                    onChange={(e) => handleChanges(e)} required/>
+                </div>
+                <div class="form-group">
+                    <label>Occassion</label>
+                </div>
+                <select class="form-select" aria-label="Default select example" name="occassion">
+                    <option value="Birthday" selected>Birthday</option>
+                    <option value="Anniversary">Anniversary</option>
+                </select>
+                <div>
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </form>
         </div>
  );
 }

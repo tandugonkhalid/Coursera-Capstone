@@ -3,6 +3,13 @@ import bgimage from '../assets/greek salad.jpg';
 import bgimage1 from '../assets/bruchetta.svg';
 import bgimage2 from '../assets/lemon dessert.jpg';
 
+const size = {
+    width: "50%",
+    height: "50%",
+    overflow: "hidden",
+    margin: "0 auto"
+}
+
 function Menu(){
     return(
         <div>
@@ -18,7 +25,7 @@ function Menu(){
                         garnished with crucnhy garlic and rosemary croutons.
                     </p>
                 </div>
-                <img class="card-img" src={bgimage} alt="background-image" />
+                <img class="card-img" src={bgimage} alt="background-image" style={size} />
             </div>
             <div class="menu-item">
                 <div class="menu-desc">
@@ -30,7 +37,7 @@ function Menu(){
                         Our Bruschetta is made from grilled bread that has been semared with garlic and seasoned with salt and olive oil.
                     </p>
                 </div>
-                <img class="card-img" src={bgimage1} alt="background-image" />
+                <img class="card-img" src={bgimage1} alt="background-image" style={size} />
             </div>
             <div class="menu-item">
                 <div class="menu-desc">
@@ -42,7 +49,7 @@ function Menu(){
                         This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.
                     </p>
                 </div>
-                <img class="card-img" src={bgimage2} alt="background-image" />
+                <img class="card-img" src={bgimage2} alt="background-image" style={size} />
             </div>
         </div>
     );
