@@ -4,7 +4,7 @@ import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
 
 
-function Reservations(){
+function Reservations({bookingTime, setBookingTime}){
 
     const [values, setValues] = useState({
         firstname: '',
@@ -84,9 +84,35 @@ function Reservations(){
                 <div class="form-group">
                     <label>Time</label>
                 </div>
-                <div class="form-group">
-                    <input type="time" placeholder='time' class="form-control" name="time"
-                    onChange={(e) => handleChanges(e)} required/>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Time" id="inlineRadio1" value="5:00pm"
+                    onChange={(e) => handleChanges(e)}/>
+                    <label class="form-check-label" for="inlineRadio1">5:00pm</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Time" id="inlineRadio1" value="6:00pm"
+                    onChange={(e) => handleChanges(e)}/>
+                    <label class="form-check-label" for="inlineRadio1">6:00pm</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Time" id="inlineRadio1" value="7:00pm"
+                    onChange={(e) => handleChanges(e)}/>
+                    <label class="form-check-label" for="inlineRadio1">7:00pm</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Time" id="inlineRadio1" value="8:00pm"
+                    onChange={(e) => handleChanges(e)}/>
+                    <label class="form-check-label" for="inlineRadio1">8:00pm</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Time" id="inlineRadio1" value="9:00pm"
+                    onChange={(e) => handleChanges(e)}/>
+                    <label class="form-check-label" for="inlineRadio1">9:00pm</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="Time" id="inlineRadio1" value="10:00pm"
+                    onChange={(e) => handleChanges(e)}/>
+                    <label class="form-check-label" for="inlineRadio1">10:00pm</label>
                 </div>
                 <div class="form-group">
                     <label>No. of Guests</label>
@@ -103,7 +129,7 @@ function Reservations(){
                     <option value="Anniversary">Anniversary</option>
                 </select>
                 <div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" onClick={()=>setBookingTime(bookingTime = values.time)}>Submit</button>
                 </div>
             </form>
         </div>

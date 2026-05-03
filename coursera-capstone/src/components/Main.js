@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../index.css';
 import { Routes, Route, Link } from "react-router-dom";
 import bgimage from '../assets/restauranfood.jpg';
 import Card from './Card';
 
-function Main() {
+function Main({bookingTime, setBookingTime}) {
+
 return (
         <main>
             <div id='main-banner'>
