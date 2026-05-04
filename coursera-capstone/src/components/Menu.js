@@ -13,7 +13,7 @@ const size = {
 function Menu({bookingTime, setBookingTime}){
 
     return(
-        <div>
+        <section>
             <h1>Specials</h1>
             <div class="menu-item">
                 <div class="menu-desc">
@@ -52,7 +52,7 @@ function Menu({bookingTime, setBookingTime}){
                 </div>
                 <img class="card-img" src={bgimage2} alt="background-image" style={size} />
             </div>
-        </div>
+        </section>
     );
 }
 

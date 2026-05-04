@@ -13,7 +13,7 @@ const size = {
 
 function Card(){
     return(
-        <div>
+        <section>
             <div id="card-header">
                 <h1>This weeks specials!</h1> 
                 <div id='reserve-btn'>
@@ -58,7 +58,7 @@ function Card(){
                     <div class="card-links"><a href="Delivery">Order a delivery</a> </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 }
 

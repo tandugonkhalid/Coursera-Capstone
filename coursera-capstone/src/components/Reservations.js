@@ -28,7 +28,7 @@ function Reservations({bookingTime, setBookingTime}){
     }
 
  return(
-        <div>
+        <section>
             <h1>Reservation Form</h1>
             <form onSubmit={handleSubmit}>
                 <div class="form-group">
@@ -132,7 +132,7 @@ function Reservations({bookingTime, setBookingTime}){
                     <button type="submit" class="btn btn-primary" onClick={()=>setBookingTime(bookingTime = values.time)}>Submit</button>
                 </div>
             </form>
-        </div>
+        </section>
  );
 }
 
