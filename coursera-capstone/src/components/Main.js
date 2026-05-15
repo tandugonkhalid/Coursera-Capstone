@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
 import '../index.css';
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import bgimage from '../assets/restauranfood.jpg';
 import Card from './Card';
 
-function Main({bookingTime, setBookingTime}) {
+function Main() {
 
 return (
         <main>

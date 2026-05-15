@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+
 import bgimage from '../assets/greek salad.jpg';
 import bgimage1 from '../assets/bruchetta.svg';
 import bgimage2 from '../assets/lemon dessert.jpg';
@@ -10,7 +10,7 @@ const size = {
     margin: "0 auto"
 }
 
-function Menu({bookingTime, setBookingTime}){
+function Menu(){
 
     return(
         <section>

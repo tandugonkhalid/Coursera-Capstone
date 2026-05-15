@@ -3,7 +3,7 @@ import React from 'react';
 import bgimage from '../assets/greek salad.jpg';
 import bgimage1 from '../assets/bruchetta.svg';
 import bgimage2 from '../assets/lemon dessert.jpg';
-import { Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const size = {
     width: "340px",
