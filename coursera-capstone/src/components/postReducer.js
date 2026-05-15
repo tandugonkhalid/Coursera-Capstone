@@ -1,13 +1,13 @@
 export const INITIAL_STATE = {
-    firstname: '',
-    lastname: '',
-    email: '',
-    contact: '',
-    inlineRadioOptions: '',
-    date: '',
-    time: '',
-    guests: '',
-    occassion: ''
+    firstname: "",
+    lastname: "",
+    email: "",
+    contact: "",
+    inlineRadioOptions: "",
+    date: "",
+    Time: "",
+    guests: "",
+    occassion: ""
 };
 
 export const postReducer = (state, action) => {

@@ -1,30 +1,20 @@
-import React from 'react';
+import React, {useContext,} from 'react';
 import '../index.css';
-import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
+import { UserContext } from '../context/UserContext';
 
 
-function Reservations({bookingTime, setBookingTime}){
+function Reservations(){
 
-    const [values, setValues] = useState({
-        firstname: '',
-        lastname: '',
-        email: '',
-        contact: '',
-        inlineRadioOptions: '',
-        date: '',
-        time: '',
-        guests: '',
-        occassion: ''
-    })
-
+    const {state, dispatch} = useContext(UserContext);
+    
     const handleChanges = (e) => {
-        setValues({...values, [e.target.name]:[e.target.value]})
+        dispatch({type: "CHANGE_INPUT", payload: {name: e.target.name, value:e.target.value}});
     }
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(values);
+        console.log(state);
     }
 
  return(
@@ -124,12 +114,12 @@ function Reservations({bookingTime, setBookingTime}){
                 <div class="form-group">
                     <label>Occassion</label>
                 </div>
-                <select class="form-select" aria-label="Default select example" name="occassion">
+                <select class="form-select" aria-label="Default select example" name="occassion" onChange={(e) => handleChanges(e)}>
                     <option value="Birthday" selected>Birthday</option>
                     <option value="Anniversary">Anniversary</option>
                 </select>
                 <div>
-                    <button type="submit" class="btn btn-primary" onClick={()=>setBookingTime(bookingTime = values.time)}>Submit</button>
+                    <button type="submit" class="btn btn-primary">Submit</button>
                 </div>
             </form>
         </section>
