@@ -5,9 +5,9 @@ export const INITIAL_STATE = {
     contact: "",
     inlineRadioOptions: "",
     date: "",
-    Time: "",
+    time: "",
     guests: "",
-    occassion: ""
+    occassion: "",
 };
 
 export const postReducer = (state, action) => {
